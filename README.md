@@ -8,5 +8,5 @@ step1: git add .
 
 step2: git commit -m "msg"
 
-step3: git push origin "branchName"
+step3: git push origin branchName
 
