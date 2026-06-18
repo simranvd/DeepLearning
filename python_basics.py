@@ -1,4 +1,5 @@
 import pandas as pd;
+import numpy as np;
 
 #constructing a directory
 dirc = {
@@ -29,3 +30,9 @@ tempDf = df.loc[2:4]
 print(tempDf)
 tempDf.reset_index(inplace=True, drop=True)
 print(tempDf)
+print("************************")
+
+#NUMPY
+#creating a numpy array of 10 random values
+ser = np.random.rand(10)
+print(ser)
