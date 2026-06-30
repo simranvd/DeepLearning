@@ -1,0 +1,42 @@
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+from nltk import pos_tag
+from nltk import ne_chunk
+
+
+# you can use any stemmer or lemmatizer. I am using WordNetLemmatizer here
+corpus = """Cats are captivating companions that blend independence with deep affection. 
+With their graceful agility, soothing purrs, and playful antics, 
+they offer a unique kind of joy. Whether they are hunting invisible toys or slow-blinking 
+to say 'I love you', these fascinating animals make every day brighter.
+My cat was born in 1999 in New York, when google was being founded."""
+
+# Tokenize the corpus into sentences and lemmatize each word in the sentences then
+# keep only the words that are not in the stopwords list. 
+lemmatizer = WordNetLemmatizer()
+sent = sent_tokenize(corpus)
+filter_sent = []
+for i in sent:
+    print("Original sentence: ", i)
+    words = word_tokenize(i)
+    words_final = [lemmatizer.lemmatize(word) for word in words if word.lower() not in stopwords.words('english')]
+    i = ' '.join(words_final)
+    filter_sent.append(i)
+    print("Filtered sentence: ", i)
+print("--------------------------------")
+
+# POS_TAG --> understanding the type of word in the sentence. For example, 'running' can be a verb or a noun.
+# pos tag --> ['run', 'climbing']
+# pos tag sents --> [['run', 'climbing'], ['sleep', 'eat']]
+for i in filter_sent:
+    sentz = i.split()
+    pos = pos_tag(sentz)
+    print("POS_TAG: ", pos)
+
+# NAME ENTITY RECOGNITION (NER) --> understanding the type of entity in the sentence. For example, 'John' is a person, 
+# 'New York' is a location, 'Google' is an organization.
+name_ent = ne_chunk(pos)
+print("entity : ", name_ent)
+    
