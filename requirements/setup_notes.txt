@@ -1,0 +1,14 @@
+# installation steps for setting up the environment
+step 1: install python 3 for mac from https://www.python.org/downloads/release/python-3120/
+step 2: a .pkg file will be downloaded, double click on it and follow the instructions to install python 3.12
+step 3: once installed, Double-click the file inside it named Install Certificates.command. 
+        Let the terminal window pop up, download the security certificates, 
+        close it when it says "completed"
+step 4: make folder and inside it make folder that would be pushed (e.g. pythonproject/projects)
+step 5: go inside projects folder
+step 6: python3.12 -m venv ../.venv --> run command, this will create a virtual environment in pythonproject folder
+step 7: activate the virtual environment by running source ../.venv/bin/activate
+step 8: pip install --upgrade pip --> run command, this will upgrade pip to the latest version
+step 9: pip install -r requirements/importsRequired.txt --> run command, this will install all the required packages
+
+

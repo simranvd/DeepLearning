@@ -1,7 +1,10 @@
-# command is pip install -r importsRequired.txt
 pandas
 numpy
 streamlit
 scikit-learn
 nltk
 gensim
+matplotlib
+tensorflow
+tensorboard
+ipykernel
