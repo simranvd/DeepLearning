@@ -4,32 +4,32 @@ from nltk.stem import SnowballStemmer
 from nltk.stem import WordNetLemmatizer
 
 #PORTER STEMMER
-print("PorterStemmer")
+print("---PorterStemmer---")
 ps = PorterStemmer()
 words = ["running", "ran", "runs", "easily", "eats","finalized","finally"]
 for w in words:
     print(w, " : ", ps.stem(w))
-print("--------------------------------")
+print("*******************************")
 
 #SNOWBALL STEMMER
-print("SnowballStemmer")
+print("---SnowballStemmer---")
 ss = SnowballStemmer("english")
 for w in words:
     print(w, " : ", ss.stem(w))
-print("--------------------------------")
+print("*******************************")
 
 #REGEXP STEMMER
-print("RegexpStemmer")
-rs = RegexpStemmer('ing$|s$|e$|able$', min=2)
+print("---RegexpStemmer---")
+rs = RegexpStemmer('ing$|s$|ed$|able$', min=2)
 words = ["running", "ran", "runs", "easily", "eats","finalized","finally"]
 for w in words:
     print(w, " : ", rs.stem(w))
-print("--------------------------------")
+print("*******************************")
 
 #LEMMATIZATION
-print("WordNetLemmatizer")
+print("---WordNetLemmatizer---")
 wnl = WordNetLemmatizer()
 words = ["running", "ran", "runs", "easily", "eats","finalized","finally"]
 for w in words:
     print(w, " : ", wnl.lemmatize(w, pos='v')) # pos='v' indicates a verb
-print("--------------------------------")
+print("*******************************")

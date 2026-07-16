@@ -1,4 +1,4 @@
-#command: streamlit run app_streamlit.py
+#command: streamlit run L2_app_streamlit.py
 
 import streamlit as st
 import pandas as pd

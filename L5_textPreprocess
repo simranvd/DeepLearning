@@ -39,4 +39,5 @@ for i in filter_sent:
 # 'New York' is a location, 'Google' is an organization.
 name_ent = ne_chunk(pos)
 print("entity : ", name_ent)
+name_ent.draw()  # This will open a window to visualize the named entities in the sentence.
     
