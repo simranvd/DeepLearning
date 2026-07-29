@@ -8,3 +8,4 @@ matplotlib
 tensorflow
 tensorboard
 ipykernel
+scikeras
