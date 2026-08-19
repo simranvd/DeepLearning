@@ -8,6 +8,8 @@ step2: git commit -m "msg"
 step3: git push origin branchName
 
 # python 
-step0: python3 -m venv envname
-step1: source envname\bin\activate
-step2: python3 -m pip install -r reqfile.txt (-m makes sure to install in active interpreter)
+step1: source ../.venv/bin/activate
+step2: python3 -m pip install -r requirements/importsRequired.txt (-m makes sure to install in active interpreter)
+
+# streamlit
+command: streamlit run app.py
