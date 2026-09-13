@@ -1,8 +1,9 @@
 # TrialProject
-Repo1
+A project acting as a base for Deep Learning and Gen AI. The project explores the concept of converting text to vector and simple RNN and ANN models.
+Below are the setup codes which may come in handy while creating/running the project
 
 # git commands
-step0: git checkout BranchName
+step0: git checkout branchName
 step1: git add .
 step2: git commit -m "msg"
 step3: git push origin branchName
